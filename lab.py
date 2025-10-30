@@ -178,7 +178,7 @@ class QuantumLab:
         qft_gate = QFTGate(n_qubits)
         qc.append(qft_gate, range(n_qubits))
         
-        statevector = Statevector.from_instruction(qc)
+        statevector = Statevector.from_instruction(qc).data
 
         return statevector
 
